@@ -14,7 +14,7 @@ The documentation is still a work in progress. More details is coming soon.
 Added
 {: .label .label-purple }
 - Added support for  `Umbraco.MediaPicker3`
-- Added [notifications event]("/uSupport-documentation/docs/extending/")
+- Added [notifications event](/uSupport-documentation/docs/extending/)
 
 Changes
 {: .label .label-blue }
