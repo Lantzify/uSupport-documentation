@@ -24,6 +24,8 @@ Removed
 {: .label .label-red }
 - Removed support for Umbraco 8, 10, 11 & 12
 
+---
+
 ## 2.0.0
 
 Added
