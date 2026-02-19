@@ -4,10 +4,25 @@ title: Changelog
 nav_order: 8
 ---
 
-{: .note }
-The documentation is still a work in progress. More details is coming soon.
-
 # Changelog
+
+## 2.1.0
+
+Added
+{: .label .label-purple }
+- Added support for comma seperated list of emails for `TicketUpdateEmail` setting
+
+Changes
+{: .label .label-blue }
+- Changed project structure to use RCL
+
+Fixes
+{: .label .label-green }
+- Comments now displays correct "comment user" and not just ticket author
+
+Removed
+{: .label .label-red }
+- Removed support for Umbraco 8, 10, 11 & 12
 
 ## 2.0.0
 
