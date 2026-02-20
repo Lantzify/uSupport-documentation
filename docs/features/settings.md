@@ -17,7 +17,7 @@ Default value: **true**
 ```
 
 ## TicketUpdateEmail
-When a new ticket is created or when a comment is added to a ticket. Update emails will be sent to this adress.
+When a new ticket is created or when a comment is added to a ticket. Update emails will be sent to this adress. Can be a comma seperated list.
 <br />
 Default value: **None**
 ```
