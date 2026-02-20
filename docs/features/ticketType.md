@@ -27,7 +27,6 @@ You can add a Umbraco data type to a ticket type if you want the user to provide
 > - Umbraco.MultiNodeTreePicker
 > - Umbraco.MemberGroupPicker
 > - Umbraco.NestedContent
-> - Umbraco.MediaPicker3
 > - Umbraco.MemberPicker
 > - Umbraco.UserPicker
 > - Umbraco.BlockList
