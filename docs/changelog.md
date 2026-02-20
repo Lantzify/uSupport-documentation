@@ -6,6 +6,18 @@ nav_order: 8
 
 # Changelog
 
+## 2.1.1
+
+Added
+{: .label .label-purple }
+- Added [notifications event](/uSupport-documentation/docs/extending/) for "save and send email" ticket
+
+Changes
+{: .label .label-blue }
+- Changed Tree access for `Ticket`, `Ticket type`, `Ticket status` and `Settings` from  `AuthorizationPolicies.TreeAccessDocumentTypes` to `uSupportSectionAccess`
+
+---
+
 ## 2.1.0
 
 Added

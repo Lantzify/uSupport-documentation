@@ -16,6 +16,7 @@ If you want something to happen when a ticket is created? Like send additional e
 - **CreateTicketNotification** - Runs when a ticket is **created**
 - **DeleteTicketNotification** - Runs when a ticket is **deleted**
 - **UpdateTicketNotification** - Runs when a ticket is **updated**
+- **UpdateTicketSendEmailNotification** - Runs when a ticket is **updated** and has sent email
 - **UpdateTicketResolvedNotification** - Runs when a ticket get the status of 'resolved'
 
 
