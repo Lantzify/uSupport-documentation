@@ -6,6 +6,24 @@ nav_order: 8
 
 # Changelog
 
+## 2.2.0
+
+Added
+{: .label .label-purple }
+- Added  [notification events](/uSupport-documentation/docs/extending/) for using Umbraco UI actions
+
+Changes
+{: .label .label-blue }
+- Changed scoping to check if scope exists else create it.
+- Changed service from AddScoped to AddTransient
+
+
+Fixes
+{: .label .label-green }
+- Fixed GetTypeIdFromName to get correct type
+
+---
+
 ## 2.1.1
 
 Added
