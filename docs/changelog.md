@@ -6,6 +6,43 @@ nav_order: 8
 
 # Changelog
 
+## 2.3.0
+Added
+{: .label .label-purple }
+- Added searching [#21](https://github.com/Lantzify/uSupport/issues/21)
+- Disabled comment button if no text in it [#27](https://github.com/Lantzify/uSupport/issues/27)
+- Added several links for Downloadable email templates [#24](https://github.com/Lantzify/uSupport/issues/24)
+- Added ticket history [#22](https://github.com/Lantzify/uSupport/issues/22)
+- Added migration to remove orphan ticket comments
+- Added sorting to tickets [#28](https://github.com/Lantzify/uSupport/issues/28)
+- Added Schema generator [#23](https://github.com/Lantzify/uSupport/issues/23)
+- Added internal comment [#36](https://github.com/Lantzify/uSupport/issues/36)
+- Added ability to use ticket values in subject [#40](https://github.com/Lantzify/uSupport/issues/40) 
+
+Changes
+{: .label .label-blue }
+- Method `GetPagedResolvedTickets `  is now gets `totalItems `same as `GetPagedActiveTickets`
+- Made Base method `Delete` virtual
+- Moved `DeleteTicketNotification `into service
+- On comment now uses Update email settings instead of new
+- "Comment on ticket" now count as a update ticket
+- Newest comments is now displayed first
+- Adjusted sorting for `ResolvedTickets `and `ActiveTickets` [#32](https://github.com/Lantzify/uSupport/issues/32) 
+- On comment, checks if EmailSetting exists before sending email
+- Moved CreateTicketNotification and into Update service
+- Moved `UpdateTicketNotification` and `TicketHistoryNotification` into Create service
+
+Fixes
+{: .label .label-green }
+- Fixed delete all comments for ticket when ticket gets deleted [#29](https://github.com/Lantzify/uSupport/issues/29) 
+
+
+Removed
+{: .label .label-red }
+- removed unwanted caching
+
+---
+
 ## 2.2.0
 
 Added
@@ -40,7 +77,7 @@ Changes
 
 Added
 {: .label .label-purple }
-- Added support for comma seperated list of emails for `TicketUpdateEmail` setting
+- Added support for comma-separated lists of emails for the `TicketUpdateEmail` setting
 
 Changes
 {: .label .label-blue }

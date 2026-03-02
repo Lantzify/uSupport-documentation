@@ -8,5 +8,3 @@ nav_order: 10
 
 ---
 
-{: .note }
-The documentation is still a work in progress. More details is coming soon.

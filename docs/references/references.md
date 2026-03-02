@@ -5,5 +5,4 @@ has_children: true
 nav_order: 8
 ---
 
-{: .note }
-The documentation is still a work in progress. More details is coming soon.
+This section mirrors the public DTOs and service interfaces used by the package so you can line up your integrations with the current codebase.

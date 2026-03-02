@@ -4,7 +4,9 @@ title: uSupport uSync
 nav_order: 9
 ---
 
-{: .note }
-The documentation is still a work in progress. More details is coming soon.
+uSupport uSync is a companion package for syncing ticket types and ticket statuses between environments.
 
-[Umbraco marketplace](https://marketplace.umbraco.com/package/usupport.usync)
+Useful links:
+
+* [Umbraco Marketplace](https://marketplace.umbraco.com/package/usupport.usync)
+* [GitHub repository](https://github.com/Lantzify/uSupport-uSync)

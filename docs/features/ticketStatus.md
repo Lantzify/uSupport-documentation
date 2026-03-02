@@ -5,31 +5,55 @@ parent: Features
 nav_order: 3
 ---
 
-{: .note }
-The documentation is still a work in progress. More details is coming soon.
-
 # Ticket statuses
-The ticket status helps track the progress and provide visibility into where the ticket stands in terms of resolution.
+Ticket statuses show where a ticket is in its lifecycle and make it easier for users and support staff to understand whether work is still active.
 
 ## Overview
-A ticket status have two properties that can be used.
 
-- Default - Newly created tickets will revice this status. **Note** only 1 status can have this value set to true.
+Each status includes the shared `uSupportTypeBase` fields:
 
-- Active - If a ticket has a status with this property set to false. The ticket will be marked as "resolved".
+* `Alias`
+* `Name`
+* `Order`
+* `Color`
+* `Icon`
+
+Status-specific fields are:
+
+* `Default`
+* `Active`
+
+Status behavior:
+
+* `Default`: newly created tickets receive this status
+* `Active`: if `false`, tickets with that status are treated as resolved
 
 ### Default statuses
-- New
-- In progress
-- Answerd
-- Resolved
+* New
+* In progress
+* Answered
+* Resolved
+
+`Resolved` is the only built-in status where `Active` is `false`.
+
+## Resolution behavior
+
+When a support user changes a ticket from one status to another:
+
+* Moving to an active status clears the resolved date
+* Moving to an inactive status sets the resolved date
+* The status change is added to ticket history
+
+## Ordering and deletion
+
+Statuses can be sorted in the tree. If a status is already used by tickets, the delete flow previews those dependencies before deletion.
 
 ## Notifications
 [Read more about notifications](/uSupport-documentation/docs/extending)
 
 ## References
 - [Properties](/uSupport-documentation/docs/references/tables#usupportticketstatus)
-- [uSupportTicketStatusService](/uSupport-documentation/docs/references/services#usupportticketstatusservice)
+- [IuSupportTicketStatusService](/uSupport-documentation/docs/references/services#iusupportticketstatusservice)
 
 ## Screenshots
 

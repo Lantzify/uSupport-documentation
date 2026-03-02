@@ -5,23 +5,19 @@ parent: References
 nav_order: 2
 ---
 
-{: .note }
-The documentation is still a work in progress. More details is coming soon.
-
-## uSupportTicketService
+## IuSupportTicketService
 ```c#
 IEnumerable<uSupportTicket> GetAll();
-uSupportPage<uSupportTicket> GetPagedResolvedTickets(long page);
-uSupportPage<uSupportTicket> GetPagedActiveTickets(long page);
+uSupportPage<uSupportTicket> GetPagedResolvedTickets(long page, string? searchTerm = null, uSupportSort? sort = null);
+uSupportPage<uSupportTicket> GetPagedActiveTickets(long page, string? searchTerm = null, uSupportSort? sort = null);
 bool AnyResolvedTickets();
 uSupportTicket Get(Guid id);
 uSupportTicket Create(uSupportTicketSchema ticket);
 uSupportTicket Update(uSupportTicketSchema ticketDto);
 void Delete(Guid id);
-void ClearTicketCache();
 ```
 
-## uSupportTicketTypeService
+## IuSupportTicketTypeService
 ```c#
 IEnumerable<uSupportTicketType> GetAll();
 uSupportTicketType Get(Guid id);
@@ -33,7 +29,7 @@ void Delete(Guid id);
 int GetTypesCount();
 ```
 
-## uSupportTicketStatusService
+## IuSupportTicketStatusService
 ```c#
 IEnumerable<uSupportTicketStatus> GetAll();
 IEnumerable<uSupportTicketStatus> GetResolvedStatuses();
@@ -48,7 +44,7 @@ void Delete(Guid id);
 int GetStatusCount();
 ```
 
-## uSupportSettingsService
+## IuSupportSettingsService
 ```c#
 void SendEmail(string toAddress, string subject, string templateViewPath, object model);
 bool GetSendEmailOnTicketCreatedSetting();
@@ -59,11 +55,23 @@ string GetEmailTemplateNewTicketPath();
 string GetEmailTemplateUpdateTicketPath();
 ```
 
-## uSupportTicketCommentService
+## IuSupportTicketCommentService
 ```c#
 IEnumerable<uSupportTicketComment> GetCommentsFromTicketId(Guid ticketId);
+IEnumerable<uSupportTicketComment> GetAll();
 uSupportTicketComment Get(Guid id);
 uSupportTicketComment Create(uSupportTicketCommentSchema comment);
 uSupportTicketComment Update(uSupportTicketCommentSchema comment);
+void DeleteByTicketId(Guid ticketId);
+void Delete(Guid id);
+```
+
+## IuSupportTicketHistoryService
+```c#
+IEnumerable<uSupportTicketHistory> GetByTicketId(Guid ticketId);
+uSupportTicketHistory Get(Guid id);
+uSupportTicketHistory Create(uSupportTicketHistorySchema history);
+uSupportTicketHistory Update(uSupportTicketHistorySchema history);
+void DeleteByTicketId(Guid ticketId);
 void Delete(Guid id);
 ```

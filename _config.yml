@@ -1,12 +1,13 @@
-title: uSupport - v2.2.0
+title: uSupport
 description: Documentation for uSupport
-theme: just-the-docs
 
-url: https://lantzify.github.io/uSupport-documentation/
+url: https://lantzify.github.io
+baseurl: "/uSupport-documentation"
 
 aux_links:
   Template Repository: https://github.com/Lantzify/uSupport-documentation
 
+theme: just-the-docs
 color_scheme: uSupport
 
 back_to_top: true
