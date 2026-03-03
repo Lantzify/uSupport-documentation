@@ -6,7 +6,7 @@ nav_order: 9
 
 uSupport uSync is a companion package for syncing ticket types and ticket statuses between environments.
 
-<img src="/uSupport-documentation/assets/usync.png" alt="logotype" style="height: 120px; margin: 0 auto; display: block;">
+<img src="/uSupport-documentation/assets/usync.png" />
 
 Useful links:
 
