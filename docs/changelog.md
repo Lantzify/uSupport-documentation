@@ -6,6 +6,37 @@ nav_order: 8
 
 # Changelog
 
+## 2.4.0
+Added
+{: .label .label-purple }
+- Pagination for ticket history and comments [#54](https://github.com/Lantzify/uSupport/pull/54) 
+- Send email now gets added to ticket history [#54](https://github.com/Lantzify/uSupport/pull/54) 
+- Comment now gets added to ticket history [#54](https://github.com/Lantzify/uSupport/pull/54)  
+- Added setting for sending mail on comment
+- Notification for when email is sent. `EmailSendingNotification` [#54](https://github.com/Lantzify/uSupport/pull/54)
+
+Changes
+{: .label .label-blue }
+- Replaced Appsettings with DB settings [#57](https://github.com/Lantzify/uSupport/pull/54)  
+- Made whole table row clickable, changed overview fields [#50](https://github.com/Lantzify/uSupport/pull/54) 
+- Replaced ticket summary from textarea to RTE 
+- Updated default email styles
+- LastUpdatedBy now gets assigned when ticket is created
+- Added more null checks
+
+Fixes
+{: .label .label-green }
+ - Changed to correct user for commenting instead of ticket author #44
+- Fixed default template path not working [#54](https://github.com/Lantzify/uSupport/pull/54)  
+- Fixed dirty check for comment textarea
+- Fixed default sorting now sorts correctly
+
+Removed
+{: .label .label-red }
+- Schema generator
+
+---
+
 ## 2.3.0
 Added
 {: .label .label-purple }

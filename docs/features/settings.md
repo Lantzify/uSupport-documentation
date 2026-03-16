@@ -7,25 +7,6 @@ nav_order: 5
 
 # Settings
 
-uSupport reads ticket-related settings from `uSupport:Settings:Tickets` in `appsettings.json`.
-
-```json
-{
-  "uSupport": {
-    "Settings": {
-      "Tickets": {
-        "SendEmailOnTicketCreated": true,
-        "TicketUpdateEmail": "support@example.com",
-        "EmailSubjectNewTicket": "A new ticket '{ExternalTicketId}' has been created",
-        "EmailSubjectUpdateTicket": "Ticket '{ExternalTicketId}' has been updated",
-        "EmailTemplateNewTicketPath": "/App_Plugins/uSupport/templates/NewTicketEmail.cshtml",
-        "EmailTemplateUpdateTicketPath": "/App_Plugins/uSupport/templates/UpdateTicketEmail.cshtml"
-      }
-    }
-  }
-}
-```
-
 For email delivery to work, Umbraco also needs working global SMTP configuration. The service specifically checks the configured SMTP `From` address before sending.
 
 ## SendEmailOnTicketCreated
@@ -35,6 +16,15 @@ Default value: **true**
 
 ```
 "SendEmailOnTicketCreated": bool
+```
+
+## SendEmailOnTicketComment
+Controls whether an email should be sent when a new ticket comment is created.
+<br />
+Default value: **true**
+
+```
+"SendEmailOnTicketComment": bool
 ```
 
 ## TicketUpdateEmail

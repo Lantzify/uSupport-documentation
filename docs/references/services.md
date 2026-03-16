@@ -22,7 +22,7 @@ void Delete(Guid id);
 IEnumerable<uSupportTicketType> GetAll();
 uSupportTicketType Get(Guid id);
 IEnumerable<uSupportTicketType> GetByIds(List<Guid> ids);
-Guid GetTypeIdFromName(string name);
+Guid? GetTypeIdFromName(string name);
 uSupportTicketType Create(uSupportTicketTypeSchema ticketType);
 uSupportTicketType Update(uSupportTicketTypeSchema ticketType);
 void Delete(Guid id);
@@ -47,17 +47,17 @@ int GetStatusCount();
 ## IuSupportSettingsService
 ```c#
 void SendEmail(string toAddress, string subject, string templateViewPath, object model);
-bool GetSendEmailOnTicketCreatedSetting();
-string GetTicketUpdateEmailSetting();
-string GetEmailSubjectNewTicket();
-string GetEmailSubjectUpdateTicket();
-string GetEmailTemplateNewTicketPath();
-string GetEmailTemplateUpdateTicketPath();
+uSupportSettings GetSettings();
+uSupportSettings Get(Guid id);
+uSupportSettings Create(uSupportSettingsSchema settings);
+uSupportSettings Update(uSupportSettingsSchema settings);
+void Delete(Guid id);
 ```
 
 ## IuSupportTicketCommentService
 ```c#
 IEnumerable<uSupportTicketComment> GetCommentsFromTicketId(Guid ticketId);
+uSupportPage<uSupportTicketComment> GetPagedCommentsForTicket(Guid ticketId, long page);
 IEnumerable<uSupportTicketComment> GetAll();
 uSupportTicketComment Get(Guid id);
 uSupportTicketComment Create(uSupportTicketCommentSchema comment);
@@ -69,6 +69,7 @@ void Delete(Guid id);
 ## IuSupportTicketHistoryService
 ```c#
 IEnumerable<uSupportTicketHistory> GetByTicketId(Guid ticketId);
+uSupportPage<uSupportTicketHistory> GetPagedByTicketId(Guid ticketId, long page);
 uSupportTicketHistory Get(Guid id);
 uSupportTicketHistory Create(uSupportTicketHistorySchema history);
 uSupportTicketHistory Update(uSupportTicketHistorySchema history);
