@@ -6,6 +6,37 @@ nav_order: 8
 
 # Changelog
 
+## 17.0.0
+Added
+{: .label .label-purple }
+- Support for Umbraco 17 and .NET 10
+- Japanese translations
+- Ticket details in the editor ticket view
+
+Changes
+{: .label .label-blue }
+- Rebuilt the backoffice UI for the Umbraco 17 backoffice
+- Replaced backoffice API controllers with Management API controllers
+- Ticket types now reference data types by key (`DataTypeKey`). A migration fills this in for existing types
+- `Author` and `User` on tickets, comments, and history are now `uSupportUser` instead of `UserDisplay`
+- `IuSupportSettingsService.SendEmail` now returns `Task`
+- Default email templates moved to `/Views/Partials/uSupport/Emails/`
+- "View ticket" links in emails point to the new backoffice URLs
+- Ticket sorting only accepts known columns
+- The major version now matches the supported Umbraco major
+
+Fixes
+{: .label .label-green }
+- `DeleteTicketNotification` is only published when a ticket is actually deleted
+- Removing ticket types and statuses
+
+Removed
+{: .label .label-red }
+- Profile from the user dashboard
+- Settings binding from `appsettings.json`
+
+---
+
 ## 2.4.1
 Changes
 {: .label .label-blue }

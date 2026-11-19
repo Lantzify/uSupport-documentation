@@ -33,6 +33,10 @@ uSupport publishes Umbraco notifications when tickets, types, statuses, and comm
 
 * **AddTicketCommentNotification**: published when a comment is added to a ticket
 
+## Emails
+
+* **EmailSendingNotification** (`uSupport.Notifications.Tickets`): published before uSupport sends an email. It exposes `TicketId`, `ToAddress`, `Subject`, and `TemplatePath`
+
 ## Built-in history handling
 
 uSupport registers a handler for `TicketHistoryNotification`. That handler creates history entries with action types such as `Created`, `Updated`, and `Resolved`, based on changes to:
@@ -50,7 +54,7 @@ using uSupport.Notifications;
 using uSupport.Services.Interfaces;
 using Umbraco.Cms.Core.Events;
 
-public class DoStuff : INotificationHandler<CreateTicketNotification>
+public class DoStuff : INotificationAsyncHandler<CreateTicketNotification>
 {
     private readonly IuSupportSettingsService _uSupportSettingsService;
 
@@ -59,12 +63,12 @@ public class DoStuff : INotificationHandler<CreateTicketNotification>
         _uSupportSettingsService = uSupportSettingsService;
     }
 
-    public void Handle(CreateTicketNotification notification)
+    public async Task HandleAsync(CreateTicketNotification notification, CancellationToken cancellationToken)
     {
-        _uSupportSettingsService.SendEmail(
+        await _uSupportSettingsService.SendEmail(
             "support@example.com",
             "Ticket received",
-            "/App_Plugins/uSupport/templates/NewTicketEmail.cshtml",
+            "/Views/Partials/uSupport/Emails/NewTicketEmail.cshtml",
             notification.Ticket);
     }
 }
@@ -82,7 +86,7 @@ public class MyComposer : IComposer
 {
     public void Compose(IUmbracoBuilder builder)
     {
-        builder.AddNotificationHandler<CreateTicketNotification, DoStuff>();
+        builder.AddNotificationAsyncHandler<CreateTicketNotification, DoStuff>();
     }
 }
 ```

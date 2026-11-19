@@ -25,6 +25,9 @@ In addition, ticket types can store:
 * `PropertyName`
 * `PropertyDescription`
 * `PropertyView`
+* `DataTypeKey`
+
+`DataTypeKey` is the key of the attached Umbraco data type. `PropertyId` and `PropertyView` remain from the Umbraco 13 version and are only used when upgrading.
 
 This allows a type to be either a simple category or a category with an attached Umbraco property editor.
 
@@ -48,19 +51,17 @@ The default `Page error` ticket type is seeded with:
 * Color: `color-indigo`
 * Description: `A page isn't working`
 * Property name: `Page`
-* Property view: `contentpicker`
+* Data type: `Content Picker`
 
 {: .warning }
 >  Unsupported data types:
 > - Umbraco.MultiNodeTreePicker
 > - Umbraco.MemberGroupPicker
-> - Umbraco.NestedContent
 > - Umbraco.MemberPicker
 > - Umbraco.UserPicker
 > - Umbraco.BlockList
 > - Umbraco.ListView
 > - Umbraco.Label
-> - Umbraco.Grid
 
 ## Ordering and deletion
 

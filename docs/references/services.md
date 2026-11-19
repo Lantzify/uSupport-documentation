@@ -46,7 +46,7 @@ int GetStatusCount();
 
 ## IuSupportSettingsService
 ```c#
-void SendEmail(string toAddress, string subject, string templateViewPath, object model);
+Task SendEmail(string toAddress, string subject, string templateViewPath, object model);
 uSupportSettings GetSettings();
 uSupportSettings Get(Guid id);
 uSupportSettings Create(uSupportSettingsSchema settings);

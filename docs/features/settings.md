@@ -7,6 +7,8 @@ nav_order: 5
 
 # Settings
 
+Settings are stored in the database and edited under **uSupport > Settings** in the backoffice.
+
 For email delivery to work, Umbraco also needs working global SMTP configuration. The service specifically checks the configured SMTP `From` address before sending.
 
 ## SendEmailOnTicketCreated
@@ -54,7 +56,7 @@ Default value: **Ticket '{ExternalTicketId}' has been updated**
 ## EmailTemplateNewTicketPath
 Path to the template used for new ticket emails.
 <br />
-Default value: **/App_Plugins/uSupport/templates/NewTicketEmail.cshtml**
+Default value: **/Views/Partials/uSupport/Emails/NewTicketEmail.cshtml**
 ```
 "EmailTemplateNewTicketPath": string
 ```
@@ -62,7 +64,7 @@ Default value: **/App_Plugins/uSupport/templates/NewTicketEmail.cshtml**
 ## EmailTemplateUpdateTicketPath
 Path to the template used for ticket update emails.
 <br />
-Default value: **/App_Plugins/uSupport/templates/UpdateTicketEmail.cshtml**
+Default value: **/Views/Partials/uSupport/Emails/UpdateTicketEmail.cshtml**
 ```
 "EmailTemplateUpdateTicketPath": string
 ```

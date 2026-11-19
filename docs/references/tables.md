@@ -15,6 +15,15 @@ public string? Color { get; set; }
 public string Icon { get; set; }
 ```
 
+## uSupportUser
+Used for `Author` on tickets and `User` on comments and history. It replaces Umbraco's `UserDisplay`, which the Umbraco 13 version used.
+```c#
+public int Id { get; set; }
+public Guid Key { get; set; }
+public string? Name { get; set; }
+public string? Email { get; set; }
+public string[] AvatarUrls { get; set; }
+```
 
 ## uSupportTicket
 ```c#
@@ -28,7 +37,7 @@ public uSupportTicketStatus? Status{ get; set; }
 public int AuthorId { get; set; }
 
 [ResultColumn]
-public UserDisplay? Author { get; set; }
+public uSupportUser? Author { get; set; }
 public DateTime Submitted { get; set; }
 public DateTime? Resolved { get; set; }
 public string? LastUpdatedBy { get; set; }
@@ -46,6 +55,7 @@ public int PropertyId { get; set; }
 public string? PropertyName { get; set; }
 public string? PropertyDescription { get; set; }
 public string? PropertyView { get; set; }
+public Guid? DataTypeKey { get; set; }
 
 public Guid Id { get; set; }
 public int Order { get; set; }
@@ -75,7 +85,7 @@ public Guid TicketId { get; set; }
 public int UserId { get; set; }
 
 [ResultColumn]
-public UserDisplay? User { get; set; }
+public uSupportUser? User { get; set; }
 public DateTime Date { get; set; }
 public string Comment { get; set; }
 ```
@@ -92,6 +102,6 @@ public string? ChangesJson { get; set; }
 public int UserId { get; set; }
 
 [ResultColumn]
-public UserDisplay? User { get; set; }
+public uSupportUser? User { get; set; }
 public DateTime Date { get; set; }
 ```
