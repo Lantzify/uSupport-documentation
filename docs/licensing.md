@@ -1,20 +1,20 @@
 ---
 layout: default
-title: Licensing
+title: uSupport Hub licensing
 permalink: /docs/licensing/
 nav_order: 12
 ---
 
-# Licensing
+# uSupport Hub licensing
 
 A uSupport Hub license is a file tied to one domain. Upload it on the hub's **License** tab. Without a file, the hub runs as a Trial that connects 1 site.
 
 ## What a license covers
 
-- **One domain**, with or without `www.`: a license for `example.com` also covers `www.example.com`, and the other way round.
+- **One domain**, with or without `www.`: a license for `example.com` also covers `www.example.com`, and the other way round. A subdomain is another domain: `example.com` doesn't cover `hub.example.com`.
 - **`localhost` always passes**, so you can try a license on your own machine.
 - **Sites**: a Trial connects 1 site. Every other license connects any number.
-- **An expiry date**. After it, the hub is read-only until you upload a new license.
+- **An expiry date, or none**. After the date, the hub is read-only until you upload a new license. A license that never expires shows **Never** on the **License** tab.
 
 The domain is the one you open the hub's backoffice on.
 
@@ -55,7 +55,7 @@ A license file that's expired, for another domain, or not genuine makes the hub 
 
 While the hub is read-only:
 
-- **Still works**: lists, tickets, comments, history, ticket types and statuses, connection checks, and editing or removing a site.
+- **Still works**: lists; reading tickets, comments and history; ticket types and statuses, connection checks, and editing or removing a site.
 - **Turned off**: saving a ticket, commenting, adding a site, and adding, changing or removing ticket types and statuses.
 
 Upload a valid license to turn these back on.
